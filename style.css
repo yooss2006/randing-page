@@ -1,0 +1,300 @@
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "GmarketSansMedium";
+}
+html {
+  font-size: 16px;
+}
+body {
+  position: relative;
+}
+
+.header {
+  width: 80%;
+  height: 102px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+}
+.header .header__logo {
+  font-family: "GmarketSansBold";
+  font-size: 25px;
+}
+.header .nav .nav__list {
+  display: flex;
+  align-items: center;
+}
+.header .nav .nav__list .nav__item {
+  margin-left: 30px;
+}
+.header .nav .nav__list .nav__item .nav__btn {
+  background-color: #d97652;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 40px;
+}
+.banner--w100 {
+  width: 100%;
+  background-color: #f2e9d8;
+}
+.banner {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  z-index: 10;
+  overflow: hidden;
+}
+.banner .banner__tit {
+  display: inline-block;
+  width: 730px;
+  margin: 302px 0 40px;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: "GmarketSansBold";
+}
+.banner .banner__desc {
+  width: 400px;
+  margin: 0 0 40px;
+}
+.banner .banner__btn {
+  padding: 15px 30px;
+  background-color: #d97652;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  margin: 0 0 200px;
+}
+.banner .banner__img {
+  width: 415px;
+  position: absolute;
+  bottom: -100px;
+  right: 0;
+  z-index: -10;
+}
+
+.introduction {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.introduction .introduction__img {
+  display: inline-block;
+  width: 500px;
+  height: 390px;
+  filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.25));
+  border: none;
+  border-radius: 30px;
+  margin: 80px 0 0;
+}
+.introduction .introduction__cont-desc {
+  width: 510px;
+  margin: 200px 0;
+}
+.introduction .introduction__cont-desc .introduction__tit {
+  font-size: 36px;
+  font-family: "GmarketSansBold";
+}
+.introduction .introduction__cont-desc .introduction__desc {
+  margin-top: 30px;
+}
+
+.showcase {
+  width: 80%;
+  margin: 0 auto;
+}
+.showcase .showcase__tit {
+  font-family: "GmarketSansBold";
+  font-size: 48px;
+  margin: 120px 0 40px 0;
+  color: #d97652;
+  text-align: center;
+}
+.showcase .showcase__desc {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.showcase .showcase__list {
+  display: flex;
+  justify-content: space-between;
+}
+.showcase .showcase__list .showcase__item .showcase__img {
+  width: 280px;
+  filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.25));
+  border-radius: 30px;
+  margin-top: 88px;
+}
+.showcase .showcase__introduction-simple {
+  margin-top: 90px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.showcase .showcase__introduction-simple .showcase__cont-desc {
+  text-align: left;
+}
+.showcase
+  .showcase__introduction-simple
+  .showcase__cont-desc
+  .showcase__desc-simple {
+  margin-bottom: 5px;
+}
+.showcase .showcase__introduction-simple .showcase__btn-detail {
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: #d97652;
+  color: white;
+  border: none;
+  border-radius: 40px;
+}
+
+.subscribe {
+  width: 80%;
+  padding: 50px 30px;
+  box-sizing: border-box;
+  background-color: #263140;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 360px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+.subscribe .subscribe__cont .subscribe__tit {
+  display: inline-block;
+  font-family: "GmarketSansBold";
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.subscribe .subscribe__cont .subscribe__desc {
+  color: #fff;
+  margin-top: 3px;
+}
+.subscribe .subscribe__form {
+  position: relative;
+}
+.subscribe .subscribe__form::before {
+  content: "";
+  width: 20px;
+  height: 16px;
+  background: url(./img/mail.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+}
+.subscribe .subscribe__form .subscribe__email {
+  width: 450px;
+  height: 50px;
+  padding-left: 55px;
+  border-radius: 60px;
+  color: #767676;
+}
+.subscribe .subscribe__form .subscribe__submit {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 6px;
+  padding: 14px 30px;
+  font-family: "GmarketSansBold";
+  background-color: #d97652;
+  color: white;
+  border: none;
+  border-radius: 40px;
+}
+
+.footer {
+  position: relative;
+  height: 450px;
+  margin-top: 170px;
+}
+.footer .footer__cont-img {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+}
+.footer .footer__cont-img::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #f2e9d8;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+}
+.footer .footer__cont-img .footer__bg {
+  width: 100%;
+  position: absolute;
+  top: -800px;
+}
+.footer .footer__cont--w100 {
+  width: 100%;
+  height: 160px;
+  background-color: white;
+}
+.footer .footer__cont {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.footer .footer__cont .footer__logo {
+  font-family: "GmarketSansBold";
+  font-size: 25px;
+}
+.footer .footer__cont .footer__list {
+  display: flex;
+}
+.footer .footer__cont .footer__list .footer__item {
+  background-color: #f29d52;
+  padding: 8px;
+  margin-left: 16px;
+  border-radius: 50px;
+}
+
+.scroll-top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+}
+.scroll-top .scroll-top__btn {
+  border: gray;
+  border-radius: 50px;
+}
+.scroll-top .scroll-top__btn:hover .scroll-top__img {
+  filter: invert(51%) sepia(9%) saturate(17%) hue-rotate(316deg) brightness(88%)
+    contrast(86%);
+}
