@@ -26,6 +26,7 @@ body {
 .App {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .header {
   width: 100%;
@@ -65,6 +66,9 @@ body {
   padding: 15px 30px;
   border: none;
   border-radius: 40px;
+}
+.header .nav .nav__list .nav__item .nav__btn:hover {
+  background-color: #64a1f0;
 }
 .header .header__menu {
   background: none;
@@ -109,6 +113,10 @@ main {
   border-radius: 40px;
   margin: 40px 0 200px;
 }
+.banner .banner__btn:hover {
+  background-color: #64a1f0;
+}
+
 .banner .banner__img {
   width: 300px;
   position: absolute;
@@ -170,6 +178,9 @@ main {
   margin-top: 88px;
   border: 5px solid #183152;
 }
+.showcase .showcase__list .showcase__item:hover {
+  border: 5px solid #64a1f0;
+}
 .showcase .showcase__list .showcase__item .showcase__img {
   width: 350px;
 }
@@ -197,6 +208,9 @@ main {
   color: white;
   border: none;
   border-radius: 40px;
+}
+.showcase .showcase__introduction-simple .showcase__btn-detail:hover {
+  background-color: #64a1f0;
 }
 
 .subscribe {
@@ -260,6 +274,9 @@ main {
   color: white;
   border: none;
   border-radius: 40px;
+}
+.subscribe .subscribe__form .subscribe__submit:hover {
+  background-color: #64a1f0;
 }
 
 .cont-modal {
@@ -357,6 +374,9 @@ main {
   margin-left: 16px;
   border-radius: 50px;
 }
+.footer .footer__cont .footer__list .footer__item:hover {
+  background-color: #64a1f0;
+}
 
 .scroll-top {
   display: inline-block;
@@ -384,12 +404,28 @@ main {
   html {
     font-size: 14px;
   }
-
   .header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
     height: 76px;
+    z-index: 20;
+  }
+  .header-cont {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    position: static;
+    transform: translateX(-32px);
+  }
+  .header--scroll {
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.897);
+    z-index: 50;
   }
   .header .header__logo {
-    font-size: 20px;
+    width: 60px;
   }
   .header .nav {
     display: none;
@@ -474,15 +510,18 @@ main {
     margin-bottom: 5px;
   }
   .showcase .showcase__list {
-    overflow: hidden;
     padding: 40px 0 60px;
     justify-content: space-around;
   }
-  .showcase .showcase__list .showcase__item .showcase__img {
-    width: 260px;
+  .showcase .showcase__list .showcase__item {
+    width: 150px;
+    height: 350px;
     filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.25));
-    border-radius: 18px;
-    margin: 0 10px;
+    margin-top: 88px;
+    border: 5px solid #183152;
+  }
+  .showcase .showcase__list .showcase__item .showcase__img {
+    width: 300px;
   }
   .showcase .showcase__introduction-simple {
     margin-top: 0;
@@ -491,8 +530,8 @@ main {
     align-items: flex-end;
   }
   .showcase .showcase__introduction-simple .showcase__desc-simple {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 30px;
   }
   .showcase
     .showcase__introduction-simple
