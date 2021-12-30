@@ -17,11 +17,15 @@
 }
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 body {
   position: relative;
 }
-
+.App {
+  width: 100%;
+  height: 100%;
+}
 .header {
   width: 80%;
   height: 102px;
@@ -51,6 +55,14 @@ body {
   border: none;
   border-radius: 40px;
 }
+.header .header__menu {
+  background: none;
+  border: none;
+  display: none;
+  width: 32px;
+  height: 32px;
+}
+
 .banner--w100 {
   width: 100%;
   background-color: #f2e9d8;
@@ -259,6 +271,9 @@ body {
   height: 160px;
   background-color: white;
 }
+.footer .footer__cont-hidden .footer__list-hidden {
+  display: none;
+}
 .footer .footer__cont {
   width: 80%;
   display: flex;
@@ -297,4 +312,267 @@ body {
 .scroll-top .scroll-top__btn:hover .scroll-top__img {
   filter: invert(51%) sepia(9%) saturate(17%) hue-rotate(316deg) brightness(88%)
     contrast(86%);
+}
+
+.nav-hidden {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .header {
+    height: 76px;
+  }
+  .header .header__logo {
+    font-size: 20px;
+  }
+  .header .nav {
+    display: none;
+  }
+  .header .nav .nav__list {
+    display: flex;
+    align-items: center;
+  }
+  .header .nav .nav__list .nav__item {
+    margin-left: 30px;
+  }
+  .header .nav .nav__list .nav__item .nav__btn {
+    background-color: #d97652;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 40px;
+  }
+  .header .header__menu {
+    display: inline-block;
+  }
+
+  .banner {
+    text-align: center;
+  }
+  .banner .banner__tit {
+    width: 263px;
+    margin: 116px 0 30px;
+    text-align: center;
+    font-size: 24px;
+  }
+  .banner .banner__desc {
+    display: inline-block;
+    width: 280px;
+    margin: 0 0 30px;
+  }
+  .banner .banner__btn {
+    padding: 11px 24px;
+    margin: 0 0 390px;
+  }
+  .banner .banner__img {
+    width: 197px;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .introduction {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .introduction .introduction__img {
+    width: 100%;
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.25));
+    border: none;
+    margin: 46px 0 0;
+  }
+  .introduction .introduction__cont-desc {
+    width: 100%;
+    margin: 40px auto 0;
+    text-align: center;
+  }
+  .introduction .introduction__cont-desc .introduction__tit {
+    font-size: 24px;
+  }
+  .introduction .introduction__cont-desc .introduction__desc {
+    margin: 20px 0 60px;
+  }
+
+  .showcase .showcase__tit {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .showcase .showcase__desc {
+    margin-bottom: 5px;
+  }
+  .showcase .showcase__list {
+    overflow: hidden;
+    padding: 40px 0 60px;
+    justify-content: space-around;
+  }
+  .showcase .showcase__list .showcase__item .showcase__img {
+    width: 260px;
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.25));
+    border-radius: 18px;
+    margin: 0 10px;
+  }
+  .showcase .showcase__introduction-simple {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .showcase
+    .showcase__introduction-simple
+    .showcase__cont-desc
+    .showcase__desc-simple {
+    margin-bottom: 3px;
+  }
+  .showcase .showcase__introduction-simple .showcase__btn-detail {
+    padding: 11px 24px;
+    margin: 30px 32px 180px;
+  }
+
+  .subscribe {
+    padding: 36px 32px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 330px;
+  }
+  .subscribe .subscribe__cont .subscribe__tit {
+    margin-bottom: 20px;
+  }
+  .subscribe .subscribe__form {
+    margin: 30px 0 60px;
+  }
+  .subscribe .subscribe__form::before {
+    width: 18px;
+    height: 18px;
+    left: 25px;
+  }
+  .subscribe .subscribe__form .subscribe__email {
+    width: 262px;
+    height: 40px;
+    padding-left: 55px;
+  }
+  .subscribe .subscribe__form .subscribe__submit {
+    right: 0;
+    top: 85px;
+    padding: 11px 24px;
+  }
+
+  .footer {
+    height: 410px;
+    margin-top: 170px;
+  }
+  .footer .footer__cont-img {
+    height: 240px;
+  }
+  .footer .footer__cont-img::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #f2e9d8;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+  }
+  .footer .footer__cont-img .footer__bg {
+    top: -100px;
+  }
+  .footer .footer__cont--w100 {
+    height: 178px;
+  }
+  .footer__cont-hidden {
+    width: 100%;
+    height: 100%;
+    padding: 24px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .footer .footer__cont {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translateX(0);
+  }
+  .footer .footer__cont .footer__logo {
+    font-size: 20px;
+  }
+  .footer .footer__cont .footer__list .footer__item {
+    margin-left: 0px;
+    margin-right: 16px;
+  }
+  .footer .footer__cont-hidden .footer__list-hidden {
+    height: 100%;
+    display: block;
+  }
+  .footer .footer__cont-hidden .footer__list-hidden ul {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .scroll-top {
+    display: none;
+  }
+  .list-btn--on::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+  }
+
+  .nav-hidden {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 40;
+  }
+  .nav--on {
+    display: block;
+  }
+  .nav-hidden .nav-hidden__right-arrow {
+    width: 32px;
+    position: absolute;
+    top: 22px;
+    left: 20px;
+  }
+  .nav-hidden .nav-hidden__list {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    margin: 120px 0 0 50px;
+    font-family: "GmarketSansBold";
+  }
+  .nav-hidden .nav-hidden__list .nav-hidden__item .nav-hidden__btn {
+    display: inline-block;
+    padding: 11px 24px;
+    margin-left: -10px;
+    background-color: #d97652;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    font-family: "GmarketSansBold";
+  }
 }

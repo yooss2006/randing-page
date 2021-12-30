@@ -7,151 +7,205 @@
     <title>randing page</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header class="header">
-      <h1 class="blind">유순상 소개 사이트</h1>
-      <!-- <img src="./logo.png" alt="" class="header__logo" /> 로고 완성되면 교체-->
-      <strong class="header__logo">유순상</strong>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">Home</li>
-          <li class="nav__item">About</li>
-          <li class="nav__item">Support</li>
-          <li class="nav__item"><button class="nav__btn">Download</button></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="banner--w100">
-      <section class="banner">
-        <h2 class="blind">이미지 배너</h2>
-        <strong class="banner__tit"
-          >Lorem, ipsum dolor sit amet consectetur a</strong
-        >
-        <p class="banner__desc">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam in qui
-          aperiam! Omnis, velit iste! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Veritatis sit deleniti quis magnam doloremque natus
-          voluptas in aut, quo mollitia assumenda cupiditate eligendi et vel
-          eaque ipsam architecto facilis nihil.
+    <div class="App">
+      <header class="header">
+        <h1 class="blind">유순상 소개 사이트</h1>
+        <!-- <img src="./logo.png" alt="" class="header__logo" /> 로고 완성되면 교체-->
+        <strong class="header__logo">유순상</strong>
+
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">Home</li>
+            <li class="nav__item">About</li>
+            <li class="nav__item">Support</li>
+            <li class="nav__item">
+              <button class="nav__btn">Download</button>
+            </li>
+          </ul>
+        </nav>
+        <button type="button" class="header__menu">
+          <img src="./img/menu.svg" alt="메뉴" class="header__menu-img" />
+        </button>
+      </header>
+      <div class="banner--w100">
+        <section class="banner">
+          <h2 class="blind">이미지 배너</h2>
+          <strong class="banner__tit"
+            >Lorem, ipsum dolor sit amet consectetur a</strong
+          >
+          <p class="banner__desc">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam in qui
+            aperiam! Omnis, velit iste! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Veritatis sit deleniti quis magnam doloremque
+            natus voluptas in aut, quo mollitia assumenda cupiditate eligendi et
+            vel eaque ipsam architecto facilis nihil.
+          </p>
+          <button class="banner__btn">Download</button>
+          <img
+            src="./img/box-cat.png"
+            alt="박스 고양이 이미지"
+            class="banner__img"
+          />
+        </section>
+      </div>
+
+      <section class="introduction">
+        <h2 class="blind">나를 소개</h2>
+        <img src="./img/img_1.jpg" alt="소개 사진" class="introduction__img" />
+        <section class="introduction__cont-desc">
+          <h3 class="blind">소개 글</h3>
+          <strong class="introduction__tit"
+            >Lorem ipsum dolor sit amet consecte est.</strong
+          >
+          <p class="introduction__desc">
+            Lorem idsadassadsadasdasdasdasdsassasaspsum
+            dodsadasdasdasdasdasdasdlor sit amet.
+          </p>
+        </section>
+      </section>
+
+      <section class="showcase">
+        <h2 class="showcase__tit">project</h2>
+        <p class="showcase__desc">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Dsdasasdolorum, sit.
         </p>
-        <button class="banner__btn">Download</button>
+        <p class="showcase__desc">
+          Lorem ipsum dolor sit amet, consectetur adipisicing
+          elitdsadasdsadsadasdasddasdas. Dolorum, sit.
+        </p>
+        <ul class="showcase__list">
+          <li class="showcase__item">
+            <img src="/img/img_1.jpg" alt="" class="showcase__img" />
+          </li>
+          <li class="showcase__item">
+            <img src="/img/img_1.jpg" alt="" class="showcase__img" />
+          </li>
+          <li class="showcase__item">
+            <img src="/img/img_1.jpg" alt="" class="showcase__img" />
+          </li>
+        </ul>
+        <section class="showcase__introduction-simple">
+          <h3 class="blind"></h3>
+          <section class="showcase__cont-desc">
+            <p class="showcase__desc-simple">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Facerdsdsaasddasde, nam!
+            </p>
+            <p class="showcase__desc-simple">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
+              nam!
+            </p>
+            <p class="showcase__desc-simple">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
+              nam!
+            </p>
+          </section>
+          <button class="showcase__btn-detail">Learn More</button>
+        </section>
+      </section>
+
+      <article class="subscribe">
+        <h2 class="blind">구독하기</h2>
+        <section class="subscribe__cont">
+          <strong class="subscribe__tit">Subscribe to our Blog post</strong>
+          <p class="subscribe__desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing
+          </p>
+          <p class="subscribe__desc">Lorem ipsum dolor sit amet.</p>
+        </section>
+
+        <form action="#" class="subscribe__form">
+          <input
+            type="email"
+            placeholder="Enter your e-mail address"
+            class="subscribe__email"
+          />
+          <button class="subscribe__submit" type="submit">subscribe</button>
+        </form>
+      </article>
+
+      <footer class="footer">
+        <article class="footer__cont-img">
+          <h2 class="blind">하단 배경 이미지</h2>
+          <img
+            src="/img/img_2.jpg"
+            alt="footer 배경이미지"
+            class="footer__bg"
+          />
+        </article>
+        <div class="footer__cont--w100">
+          <section class="footer__cont-hidden">
+            <section class="footer__cont">
+              <h2 class="blind">하단 바</h2>
+              <strong class="footer__logo">유순상</strong>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <img
+                    src="./img/blog.svg"
+                    alt="블로그"
+                    class="footer__site-other"
+                  />
+                </li>
+                <li class="footer__item">
+                  <img src="./img/blog.svg" alt="" class="footer__site-other" />
+                </li>
+                <li class="footer__item">
+                  <img src="./img/blog.svg" alt="" class="footer__site-other" />
+                </li>
+                <li class="footer__item">
+                  <img src="./img/blog.svg" alt="" class="footer__site-other" />
+                </li>
+              </ul>
+            </section>
+            <article class="footer__list-hidden">
+              <ul>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Support</li>
+                <li>Terms of Use</li>
+              </ul>
+            </article>
+          </section>
+        </div>
+
+        <article class="scroll-top">
+          <h2 class="blind">누르면 최상단으로 올라가는 버튼</h2>
+          <button class="scroll-top__btn">
+            <img
+              src="./img/top-btn.svg"
+              alt="위로 올라가는 버튼"
+              class="scroll-top__img"
+            />
+          </button>
+        </article>
+      </footer>
+
+      <section class="nav-hidden">
+        <h2 class="blind">반응형에서만 표시되는 웹입니다.</h2>
         <img
-          src="./img/box-cat.png"
-          alt="박스 고양이 이미지"
-          class="banner__img"
+          src="./img/arrow-right.svg"
+          alt="화살표"
+          class="nav-hidden__right-arrow"
         />
+        <ul class="nav-hidden__list">
+          <li class="nav-hidden__item">Home</li>
+          <li class="nav-hidden__item">About</li>
+          <li class="nav-hidden__item">Support</li>
+          <li class="nav-hidden__item">
+            <button class="nav-hidden__btn">Download</button>
+          </li>
+        </ul>
       </section>
     </div>
 
-    <section class="introduction">
-      <h2 class="blind">나를 소개</h2>
-      <img src="./img/img_1.jpg" alt="소개 사진" class="introduction__img" />
-      <section class="introduction__cont-desc">
-        <h3 class="blind">소개 글</h3>
-        <strong class="introduction__tit"
-          >Lorem ipsum dolor sit amet consecte est.</strong
-        >
-        <p class="introduction__desc">Lorem ipsum dolor sit amet.</p>
-      </section>
-    </section>
-
-    <section class="showcase">
-      <h2 class="showcase__tit">project</h2>
-      <p class="showcase__desc">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Dsdasasdolorum, sit.
-      </p>
-      <p class="showcase__desc">
-        Lorem ipsum dolor sit amet, consectetur adipisicing
-        elitdsadasdsadsadasdasddasdas. Dolorum, sit.
-      </p>
-      <ul class="showcase__list">
-        <li class="showcase__item">
-          <img src="/img/img_1.jpg" alt="" class="showcase__img" />
-        </li>
-        <li class="showcase__item">
-          <img src="/img/img_1.jpg" alt="" class="showcase__img" />
-        </li>
-        <li class="showcase__item">
-          <img src="/img/img_1.jpg" alt="" class="showcase__img" />
-        </li>
-      </ul>
-      <section class="showcase__introduction-simple">
-        <h3 class="blind"></h3>
-        <section class="showcase__cont-desc">
-          <p class="showcase__desc-simple">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Facerdsdsaasddasde, nam!
-          </p>
-          <p class="showcase__desc-simple">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-            nam!
-          </p>
-          <p class="showcase__desc-simple">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-            nam!
-          </p>
-        </section>
-        <button class="showcase__btn-detail">Learn More</button>
-      </section>
-    </section>
-
-    <article class="subscribe">
-      <h2 class="blind">구독하기</h2>
-      <section class="subscribe__cont">
-        <strong class="subscribe__tit">Subscribe to our Blog post</strong>
-        <p class="subscribe__desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing
-        </p>
-        <p class="subscribe__desc">Lorem ipsum dolor sit amet.</p>
-      </section>
-
-      <form action="#" class="subscribe__form">
-        <input
-          type="email"
-          placeholder="Enter your e-mail address"
-          class="subscribe__email"
-        />
-        <button class="subscribe__submit" type="submit">subscribe</button>
-      </form>
-    </article>
-    <footer class="footer">
-      <article class="footer__cont-img">
-        <h2 class="blind">하단 배경 이미지</h2>
-        <img src="/img/img_2.jpg" alt="footer 배경이미지" class="footer__bg" />
-      </article>
-      <div class="footer__cont--w100">
-        <section class="footer__cont">
-          <h2 class="blind">하단 바</h2>
-          <strong class="footer__logo">유순상</strong>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <img src="./img/blog.svg" alt="" class="footer__site-other" />
-            </li>
-            <li class="footer__item">
-              <img src="./img/blog.svg" alt="" class="footer__site-other" />
-            </li>
-            <li class="footer__item">
-              <img src="./img/blog.svg" alt="" class="footer__site-other" />
-            </li>
-            <li class="footer__item">
-              <img src="./img/blog.svg" alt="" class="footer__site-other" />
-            </li>
-          </ul>
-        </section>
-      </div>
-      <article class="scroll-top">
-        <h2 class="blind">누르면 최상단으로 올라가는 버튼</h2>
-        <button class="scroll-top__btn">
-          <img
-            src="./img/top-btn.svg"
-            alt="위로 올라가는 버튼"
-            class="scroll-top__img"
-          />
-        </button>
-      </article>
-    </footer>
     <script src="app.js"></script>
   </body>
 </html>
