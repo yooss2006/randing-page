@@ -1,0 +1,404 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SpoqaHanSansNeo-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$bold: "SpoqaHanSansNeo-Bold";
+$blue: #183152, #375d81, #64a1f0, #abcaf1;
+$url: "../img/";
+$nSize: 1.3vw;
+$bSize: 2.5vw;
+
+@import "reset";
+
+@mixin flex($j: space-between, $a: stretch, $d: row) {
+  display: flex;
+  flex-direction: $d;
+  justify-content: $j;
+  align-items: $a;
+}
+@mixin btn($c: #183152, $r: 40px) {
+  background-color: $c;
+  border: none;
+  border-radius: $r;
+  color: #fff;
+}
+@mixin ir($bg) {
+  background-image: url($url + $bg);
+  background-repeat: no-repeat;
+  span {
+    @extend .blind;
+  }
+}
+
+body {
+  font-family: "SpoqaHanSansNeo-Regular";
+  color: nth($blue, 1);
+}
+
+.hide {
+  display: none;
+}
+
+.header {
+  @include flex($a: center);
+  max-width: 1280px;
+  width: 66.66vw;
+  position: absolute;
+  top: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  h1 {
+    img {
+      width: 8.87vw;
+    }
+  }
+  nav {
+    @include flex($a: center);
+    ul {
+      @include flex($a: center);
+      font-size: $nSize;
+      li:nth-child(2) {
+        margin: 0 1.56vw;
+      }
+    }
+
+    .btnHam {
+      span {
+        width: 24px;
+        height: 2px;
+        display: block;
+        background-color: black;
+        &:nth-child(2) {
+          margin: 8px 0;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  position: relative;
+}
+
+.area {
+  .inner {
+    width: 66.66vw;
+    margin: 0 auto;
+  }
+
+  &.banner {
+    @include flex($a: center);
+    height: 46.87vw;
+    background: lighten(nth($blue, 3), 20%) url(../img/배경그림.png)
+      no-repeat 61.71vw 110px;
+    header {
+      h2 {
+        //화면을 줄였을 때 폰트 사이즈 크기가 애매하다.
+        font-size: $bSize;
+        font-family: $bold;
+        color: nth($blue, 2);
+      }
+      ol {
+        margin: 2.08vw 0;
+        li {
+          //크기 눈대중으로 수정
+          font-size: $nSize;
+        }
+      }
+    }
+    button {
+      @include btn;
+      padding: 0.7812vw 1.56vw;
+    }
+  }
+
+  &.intro {
+    .inner {
+      @include flex($a: center);
+    }
+    .ir {
+      width: 29.37vw;
+      height: 24.31vw;
+      @include ir($bg: "me.jpg");
+      background-position: center center;
+      background-size: contain;
+      border-radius: 1.56vw;
+      filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25));
+      margin: 4.166vw 0 6.25vw;
+    }
+    header {
+      h2 {
+        font-size: 1.875vw;
+        line-height: 1.5;
+        font-family: $bold;
+        margin-bottom: 1.56vw;
+        color: nth($blue, 2);
+      }
+      p {
+        font-size: $nSize;
+      }
+    }
+  }
+
+  &.showcase {
+    text-align: center;
+    header {
+      h2 {
+        font-size: $bSize;
+        font-family: $bold;
+        color: nth($blue, 2);
+        margin-bottom: 2.08vw;
+      }
+      p {
+        font-size: $nSize;
+        line-height: 1.8;
+      }
+    }
+    ul {
+      @include flex;
+      margin: 4.58vw 0;
+      li {
+        width: 30%;
+        button {
+          width: 19.68vw;
+          height: 19.68vw;
+          border: 1px solid nth($blue, 2);
+          border-radius: 1.56vw;
+          &.runner {
+            @include ir("image1.png");
+          }
+          &.lizard {
+            @include ir("image2.png");
+          }
+          &.man {
+            @include ir("image3.png");
+          }
+          background: center center/contain;
+        }
+        &:hover button {
+          box-shadow: 0 0 5px 2px nth($blue, 3);
+        }
+      }
+    }
+    .desc {
+      @include flex($j: center, $a: center);
+      margin-bottom: 10.2vw;
+      p {
+        font-size: $nSize;
+        margin-right: 2.1vw;
+      }
+      button {
+        @include btn;
+        padding: 0.7812vw 1.56vw;
+        margin-left: 2.1vw;
+      }
+    }
+  }
+}
+
+.subscribe {
+  width: 66.66vw;
+  position: absolute;
+  bottom: 12.81vw;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: nth($blue, 2);
+  @include flex($a: center);
+  padding: 2.6vw 3.02vw;
+  border-radius: 1.56vw;
+  z-index: 99;
+  header {
+    width: 50%;
+    h2 {
+      font-size: 1.875vw;
+      font-family: $bold;
+      margin-bottom: 0.93vw;
+      color: #fff;
+    }
+    p {
+      font-size: $nSize;
+      color: nth($blue, 4);
+    }
+  }
+  .contForm {
+    width: 50%;
+    position: relative;
+    label {
+      display: block;
+      position: relative;
+      input {
+        display: block;
+        width: 100%;
+        font-size: $nSize;
+        padding: 1.04vw 0 1.04vw 3.55vw;
+        border-radius: 3.12vw;
+        border: none;
+        box-sizing: border-box;
+      }
+      &::before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1.56vw;
+        content: "";
+        width: 1.25vw;
+        height: 1.25vw;
+        background: url($url + "mail.svg") no-repeat center center/contain;
+        display: block;
+        z-index: 30;
+      }
+    }
+    button {
+      position: absolute;
+      right: 3px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: $nSize;
+      @include btn(nth($blue, 1));
+      padding: 0.7812vw 1.56vw;
+    }
+  }
+}
+
+.bgImg {
+  background: url($url + "footerbg.jpg") no-repeat center -50px / cover;
+  height: 17.7vw;
+  position: relative;
+  .innerImg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: nth($blue, 1);
+    opacity: 0.2;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.753);
+  z-index: 100;
+  .modalInner {
+    position: absolute;
+    width: 31.25vw;
+    height: 20.83vw;
+    bottom: 17vw;
+    left: 50%;
+    transform: translateX(-50%);
+    @include flex($j: center, $a: center, $d: column);
+    background: url($url + "modal-bg-img.png") no-repeat center center/cover;
+    border-radius: 1.56vw;
+    text-align: center;
+    z-index: 100;
+    &::before {
+      display: block;
+      width: 5.72vw;
+      height: 5.72vw;
+      margin: 0 auto;
+      content: "";
+      background: url($url + "모달창.png") no-repeat center center/contain;
+    }
+    h2 {
+      margin: 1.25vw 0 0.62vw;
+      font-size: 1.87vw;
+      font-family: $bold;
+      color: nth($blue, 2);
+    }
+    p {
+      margin-bottom: 1.97vw;
+      font-size: 0.9vw;
+    }
+    button {
+      @include btn;
+      padding: 0.7812vw 1.56vw;
+    }
+  }
+}
+.scroll-top {
+  position: fixed;
+  width: 2.6vw;
+  height: 2.6vw;
+  right: 1.25vw;
+  bottom: 1.25vw;
+  background-color: nth($blue, 1);
+  @include flex($j: center, $a: center);
+  border-radius: 50%;
+  .cont-box {
+    display: block;
+    width: 1.04vw;
+    height: 0.625vw;
+    overflow: hidden;
+    span {
+      margin-top: 2px;
+      display: block;
+      width: 1.04vw;
+      height: 1.04vw;
+      border: 2px solid rgb(158, 158, 158);
+      transform: rotateZ(45deg);
+      box-sizing: border-box;
+    }
+  }
+}
+
+.footer {
+  @include flex($a: center);
+  .fullScreen {
+    width: 66.66vw;
+    margin: 2.34vw auto;
+    @include flex($a: center);
+    img {
+      width: 8.87vw;
+    }
+    ul {
+      @include flex($a: center);
+      li {
+        background-color: nth($blue, 2);
+        border-radius: 50%;
+        a {
+          display: block;
+          width: 2.18vw;
+          height: 2.18vw;
+          &.blog {
+            @include ir("blog.svg");
+          }
+          &.instagram {
+            @include ir("instagram.svg");
+          }
+          &.facebook {
+            @include ir("facebook.svg");
+          }
+          &.youtube {
+            @include ir("youtube.svg");
+          }
+          background-position: center center;
+          background-size: 1.25vw;
+        }
+        &:nth-child(2) {
+          margin: 0 1.61vw;
+        }
+        &:nth-child(3) {
+          margin-right: 1.61vw;
+        }
+      }
+    }
+  }
+}

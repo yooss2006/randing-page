@@ -4,215 +4,171 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>randing page</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
+    <title>Soon Exhibition</title>
+    <link rel="stylesheet" href="css/common.css" />
   </head>
+
   <body>
-    <div class="App">
-      <header class="header">
-        <h1 class="blind">유순상 그림소개 사이트</h1>
-        <section class="header-cont">
-         <h2 class="blind">상단 바</h2>
-          <img src="./img/tit.png" alt="로고" class="header__logo" />
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item"><a href="#">Home</a></li>
-              <li class="nav__item"><a href="#introduction">introduction</a></li>
-              <li class="nav__item"><a href="#showcase">exhibition</a></li>
-              <li class="nav__item">
-                <button class="nav__btn">😃</button>
-              </li>
-            </ul>
-          </nav>
-          <button type="button" class="header__menu">
-            <img src="./img/menu.svg" alt="메뉴" class="header__menu-img" />
-          </button>
-        </section>
+    <header class="header">
+      <h1>
+        <img src="./img/tit.png" alt="순상 전시회" />
+      </h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#intro">introduction</a></li>
+          <li><a href="#showcase">exhibition</a></li>
+        </ul>
+        <button type="button" class="btnHam hide">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <button type="button" class="closeNav hide">
+          <img src="./img/arrow-right.svg" alt="닫기" />
+        </button>
+      </nav>
+    </header>
 
-      </header>
-      <main>
-        <div class="banner--w100">
-          <section class="banner">
-            <h2 class="blind">이미지 배너</h2>
-            <strong class="banner__tit"
-              >안녕하세요! 유순상의 전시회에 오신것을 환영합니다. </strong
-            >
-            <p class="banner__desc">
-              1. 전시회에서는 조용히 해주세요.
-            </p>
-            <p class="banner__desc">
-              2. 만지지 말고 눈으로만 감상해주세요.
-            </p>
-            <p class="banner__desc">
-              3. 보러와주셔서 감사합니다.
-            </p>
-            <button class="banner__btn">자세히 알아보기</button>
-            <img
-              src="./img/배경그림.png"
-              alt="걷는 사람 이미지"
-              class="banner__img"
-            />
-          </section>
+    <main class="main">
+      <section class="area banner">
+        <div class="inner">
+          <header>
+            <h2>
+              안녕하세요! 그림 그리는 것을 좋아하는 <br />
+              유순상의 전시회에 오신 것을 환영합니다.
+            </h2>
+            <ol>
+              <li>1. 전시회에서는 조용히 해주세요.</li>
+              <li>2. 만지지 말고 눈으로만 감상해주세요.</li>
+              <li>3. 정숙하며 감상해주세요.</li>
+            </ol>
+          </header>
+          <button type="button">전시회 입장</button>
         </div>
+      </section>
 
-        <section class="introduction" id="introduction">
-          <h2 class="blind">작품 소개</h2>
-          <img
-            src="./img/image1.png"
-            alt="작품"
-            class="introduction__img"
-          />
-          <section class="introduction__cont-desc">
-            <h3 class="blind">작품 소개 글</h3>
-            <strong class="introduction__tit"
-              >러너</strong
-            >
-            <p class="introduction__desc">
-              앞으로 달려가기 직전의 사람입니다.
-            </p>
-          </section>
-        </section>
+      <section class="area intro" id="intro">
+        <div class="inner">
+          <div class="ir">
+            <span>유순상 이미지</span>
+          </div>
+          <header>
+            <h2>
+              안녕하세요. <br />
+              작은 미술관을 운영하는 유순상입니다.
+            </h2>
+            <p>보러와주셔서 감사합니다.</p>
+          </header>
+        </div>
+      </section>
 
-        <section class="showcase" id="showcase">
-          <h2 class="showcase__tit">전시된 미술품</h2>
-          <p class="showcase__desc">
-            아이패드로 슬쩍 그렸던 그림들입니다.
-          </p>
-          <p class="showcase__desc">
-            열심히 그렸으므로 좋게 봐주시면 감사하겠습니다.
-          </p>
-          <ul class="showcase__list">
-            <li class="showcase__item">
-              <img src="./img/image1.png" alt="러너" class="showcase__img" />
+      <section class="area showcase" id="showcase">
+        <div class="inner">
+          <header>
+            <h2>미술 작품들</h2>
+            <p>아이패드로 슬쩍 그렸던 그림들입니다.</p>
+            <p>미술 전공자는 아니니까 이해 부탁드려요.</p>
+          </header>
+          <ul>
+            <li>
+              <button type="button" class="runner">
+                <span>뛰는 사람 그림</span>
+              </button>
             </li>
-            <li class="showcase__item">
-              <img src="./img/image2.png" alt="" class="showcase__img" />
+            <li>
+              <button type="button" class="lizard">
+                <span>도롱뇽 그림</span>
+              </button>
             </li>
-            <li class="showcase__item">
-              <img src="./img/image3.png" alt="" class="showcase__img" />
+            <li>
+              <button type="button" class="man">
+                <span>앉은 사람 그림</span>
+              </button>
             </li>
           </ul>
-          <section class="showcase__introduction-simple">
-            <h3 class="blind"></h3>
-            <section class="showcase__cont-desc">
-              <p class="showcase__desc-simple">
-                원하는 그림을 클릭 후 우측 버튼을 눌러주세요.
-              </p>
-            </section>
-            <button class="showcase__btn-detail">자세히 보기</button>
-          </section>
-        </section>
-
-        <article class="subscribe">
-          <h2 class="blind">구독하기</h2>
-          <section class="subscribe__cont">
-            <strong class="subscribe__tit">전시회를 구독해주세요.</strong>
-            <p class="subscribe__desc">
-              많은 사람들의 구독은 제게 큰 힘이됩니다.
-            </p>
-          </section>
-          <form action="/" class="subscribe__form">
-            <input
-              type="text"
-              required
-              placeholder="이메일을 입력해주세요."
-              class="subscribe__email"
-            />
-            <button class="subscribe__submit" type="submit">구독하기</button>
-          </form>
-        </article>
-
-        <article class="cont-modal cont-modal--hide">
-          <h2 class="blind">구독 이메일 작성시 표시되는 모달창입니다.</h2>
-          <img src="./img/모달창.png" alt="" class="cont-modal__img">
-          <strong class="cont-modal__tit">감사합니다!</strong>
-          <p class="cont-modal__desc">구독해주셔서 감사합니다. 앞으로 열심히 하겠습니다.</p>
-          <button class="cont-modal__btn">돌아가기</button>
-        </article>
-
-        <article class="cont-img">
-          <h2 class="blind">하단 배경 이미지</h2>
-          <img
-            src="/img/footerbg.jpg"
-            alt="footer 배경이미지"
-            class="cont-img__bg"
-          />
-        </article>
-
-        <article class="scroll-top">
-          <h2 class="blind">누르면 최상단으로 올라가는 버튼</h2>
-          <button class="scroll-top__btn">
-            <img
-              src="./img/top-btn.svg"
-              alt="위로 올라가는 버튼"
-              class="scroll-top__img"
-            />
-          </button>
-        </article>
-      </main>
-
-      <footer class="footer">
-          <section class="footer__cont-hidden">
-            <section class="footer__cont">
-              <h2 class="blind">하단 바</h2>
-              <img src="./img/tit.png" alt="로고" class="footer__logo" />
-              <ul class="footer__list">
-                <li class="footer__item">
-                  <img
-                    src="./img/blog.svg"
-                    alt="블로그"
-                    class="footer__site-other"
-                  />
-                </li>
-                <li class="footer__item">
-                  <img src="./img/instagram.svg" alt="인스타그램" class="footer__site-other" />
-                </li>
-                <li class="footer__item">
-                  <img src="./img/facebook.svg" alt="페이스북" class="footer__site-other" />
-                </li>
-                <li class="footer__item">
-                  <img src="./img/youtube.svg" alt="유튜브" class="footer__site-other" />
-                </li>
-              </ul>
-            </section>
-
-            <article class="footer__list-hidden">
-              <ul>
-                <li>About</li>
-                <li>Blog</li>
-                <li>Support</li>
-                <li>Terms of Use</li>
-              </ul>
-            </article>
-
-          </section>
+          <div class="desc">
+            <p>언제언제 그린 그림입니다.</p>
+            <button type="button">더보기</button>
+          </div>
         </div>
-      </footer>
+      </section>
 
-      <section class="nav-hidden">
-        <h2 class="blind">반응형에서만 표시되는 웹입니다.</h2>
-        <img
-          src="./img/arrow-right.svg"
-          alt="화살표"
-          class="nav-hidden__right-arrow"
-        />
-        <ul class="nav-hidden__list">
-          <li class="nav-hidden__item">Home</li>
-          <li class="nav-hidden__item">About</li>
-          <li class="nav-hidden__item">Support</li>
-          <li class="nav-hidden__item">
-            <button class="nav-hidden__btn">Download</button>
+      <article class="subscribe">
+        <header>
+          <h2>전시회를 구독해주세요.</h2>
+          <p>많은 사람들의 구독은 제게 큰 힘이됩니다.</p>
+        </header>
+        <div class="contForm">
+          <form action="/">
+            <label for="emailInp">
+              <span class="blind">구독 이메일을 입력해주세요.</span>
+              <input
+                type="email"
+                required
+                placeholder="이메일을 입력해주세요."
+                id="emailInp"
+              />
+            </label>
+            <button type="submit">구독하기</button>
+          </form>
+        </div>
+      </article>
+
+      <div class="bgImg">
+        <div class="innerImg"></div>
+      </div>
+
+      <article class="modal hide">
+        <div class="modalInner">
+          <h2>구독해주셔서 감사합니다</h2>
+          <p>앞으로 열심히 하겠습니다.</p>
+          <button type="button">돌아가기</button>
+        </div>
+      </article>
+
+      <button type="button" class="scroll-top">
+        <span class="blind">누르면 최상단으로 올라가는 버튼</span>
+        <span class="cont-box">
+          <span></span>
+        </span>
+      </button>
+    </main>
+
+    <footer class="footer">
+      <div class="fullScreen">
+        <img src="./img/tit.png" alt="로고" class="footer__logo" />
+        <ul>
+          <li>
+            <a href="#" class="blog">
+              <span>blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="instagram">
+              <span>instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="facebook">
+              <span>facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="youtube">
+              <span>youtube</span>
+            </a>
           </li>
         </ul>
-      </section>
-    </div>
+      </div>
+      <!-- <ul class="mobileList">
+        <li>About</li>
+        <li>Blog</li>
+        <li>Support</li>
+        <li>Terms of Use</li>
+      </ul> -->
+    </footer>
 
-    <script src="app.js"></script>
+    <!-- <script src="app.js"></script> -->
   </body>
 </html>
