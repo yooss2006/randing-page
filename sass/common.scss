@@ -22,30 +22,7 @@ $nSize: 1.3vw;
 $bSize: 2.5vw;
 $mbBSize: 4.8vw;
 $mbNSize: 3.58vw;
-@import "reset";
-
-@mixin flex($j: space-between, $a: stretch, $d: row) {
-  display: flex;
-  flex-direction: $d;
-  justify-content: $j;
-  align-items: $a;
-}
-@mixin btn($c: #183152, $r: 40px) {
-  background-color: $c;
-  border: none;
-  border-radius: $r;
-  color: #fff;
-  &:hover {
-    background-color: #c7add6;
-  }
-}
-@mixin ir($bg) {
-  background-image: url($url + $bg);
-  background-repeat: no-repeat;
-  span {
-    @extend .blind;
-  }
-}
+@import "reset", "mixin";
 
 body {
   font-family: "SpoqaHanSansNeo-Regular";
@@ -65,6 +42,16 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 99;
+  transition: 0.6s all;
+  box-sizing: border-box;
+  &.fixed {
+    position: fixed;
+    background-color: rgba(#fff, 0.6);
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    padding: 10px 5.12vw;
+  }
   h1 {
     img {
       width: 8.87vw;
@@ -78,6 +65,9 @@ body {
       li:nth-child(2) {
         margin: 0 1.56vw;
       }
+    }
+    .closeNav {
+      display: none;
     }
 
     .btnHam {
@@ -345,6 +335,9 @@ body {
   background-color: nth($blue, 1);
   @include flex($j: center, $a: center);
   border-radius: 50%;
+  &.underFooter {
+    display: none;
+  }
   .cont-box {
     display: block;
     width: 1.04vw;
@@ -358,6 +351,9 @@ body {
       border: 2px solid rgb(158, 158, 158);
       transform: rotateZ(45deg);
       box-sizing: border-box;
+      &.on {
+        border: 2px solid #fff;
+      }
     }
   }
 }

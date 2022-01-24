@@ -62,10 +62,11 @@
             margin: 0 0 7.69vw;
           }
         }
-        .ham {
+        .btnHam {
           display: none;
         }
         .closeNav {
+          display: block;
           position: absolute;
           top: 5.12vw;
           left: 5.12vw;

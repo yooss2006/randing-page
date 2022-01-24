@@ -1,35 +1,47 @@
-// //작은화면일 떄 목록 클릭시
-// let navBtnOn = document.querySelector(".header__menu");
-// navBtnOn.addEventListener("click", () => {
-//   window.scrollTo({ top: 0 });
-//   document.querySelector(".App").classList.add("list-btn--on");
-//   document.querySelector(".nav-hidden").classList.add("nav--on");
-// });
-// //작은화면일 때 화살표 클릭시
-// let navBtnOff = document.querySelector(".nav-hidden__right-arrow");
-// navBtnOff.addEventListener("click", () => {
-//   document.querySelector(".App").classList.remove("list-btn--on");
-//   document.querySelector(".nav-hidden").classList.remove("nav--on");
-// });
-// //스크롤 탑 버튼 클릭
-// let scollTop = document.querySelector(".scroll-top__btn");
-// scollTop.addEventListener("click", () => {
-//   $("html, body").animate({ scrollTop: "0px" });
-// });
+//작은화면일 떄 목록 클릭시
+let navBtnOn = document.querySelector(".nav .btnHam");
+let closeNav = document.querySelector(".nav .closeNav");
+let scrollTop = document.querySelector(".scroll-top");
+navBtnOn.addEventListener("click", () => {
+  window.scrollTo({ top: 0 });
+  document.querySelector(".header").classList.add("onHam");
+});
+closeNav.addEventListener("click", () => {
+  document.querySelector(".header").classList.remove("onHam");
+});
 
-// //스크롤시 헤드 고정
-// document.addEventListener("scroll", () => {
-//   let scrollValue = document.documentElement.scrollTop;
-//   if (scrollValue > 50) {
-//     if (!document.querySelector(".header").classList[1]) {
-//       document.querySelector(".header").classList.add("header--scroll");
-//     }
-//   } else {
-//     if (document.querySelector(".header").classList[1]) {
-//       document.querySelector(".header").classList.remove("header--scroll");
-//     }
-//   }
-// });
+//스크롤시 헤드 고정
+document.addEventListener("scroll", () => {
+  let scrollValue = document.documentElement.scrollTop;
+  //스크롤 탑 버튼
+
+  // scrollTop.addEventListener("click", () => {
+  //   $("html, body").animate({ scrollTop: "0px" });
+  // });
+  console.log(scrollValue);
+  if (scrollValue > 43) {
+    //헤더 고정
+    if (!document.querySelector(".header").classList.contains("fixed")) {
+      document.querySelector(".header").classList.add("fixed");
+      //스크롤 온
+      scrollTop.querySelector("");
+    }
+  } else {
+    if (document.querySelector(".header").classList.contains("fixed")) {
+      document.querySelector(".header").classList.remove("fixed");
+    }
+  }
+
+  if (scrollValue > 303) {
+    if (!scrollTop.classList.contains("underFooter")) {
+      scrollTop.classList.add("underFooter");
+    }
+  } else {
+    if (scrollTop.classList.contains("underFooter")) {
+      scrollTop.classList.remove("underFooter");
+    }
+  }
+});
 
 // //구독 input 입력
 // let subscribeForm = document.querySelector(".subscribe__form");

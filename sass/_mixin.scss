@@ -1,0 +1,22 @@
+@mixin flex($j: space-between, $a: stretch, $d: row) {
+  display: flex;
+  flex-direction: $d;
+  justify-content: $j;
+  align-items: $a;
+}
+@mixin btn($c: #183152, $r: 40px) {
+  background-color: $c;
+  border: none;
+  border-radius: $r;
+  color: #fff;
+  &:hover {
+    background-color: #c7add6;
+  }
+}
+@mixin ir($bg) {
+  background-image: url($url + $bg);
+  background-repeat: no-repeat;
+  span {
+    @extend .blind;
+  }
+}
