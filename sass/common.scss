@@ -20,7 +20,8 @@ $blue: #183152, #375d81, #64a1f0, #abcaf1;
 $url: "../img/";
 $nSize: 1.3vw;
 $bSize: 2.5vw;
-
+$mbBSize: 4.8vw;
+$mbNSize: 3.58vw;
 @import "reset";
 
 @mixin flex($j: space-between, $a: stretch, $d: row) {
@@ -34,6 +35,9 @@ $bSize: 2.5vw;
   border: none;
   border-radius: $r;
   color: #fff;
+  &:hover {
+    background-color: #c7add6;
+  }
 }
 @mixin ir($bg) {
   background-image: url($url + $bg);
@@ -77,6 +81,7 @@ body {
     }
 
     .btnHam {
+      display: none;
       span {
         width: 24px;
         height: 2px;
@@ -136,7 +141,6 @@ body {
       @include ir($bg: "me.jpg");
       background-position: center center;
       background-size: contain;
-      border-radius: 1.56vw;
       filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25));
       margin: 4.166vw 0 6.25vw;
     }
@@ -172,7 +176,6 @@ body {
       @include flex;
       margin: 4.58vw 0;
       li {
-        width: 30%;
         button {
           width: 19.68vw;
           height: 19.68vw;
@@ -402,3 +405,5 @@ body {
     }
   }
 }
+
+@import "media";
