@@ -29,10 +29,6 @@ body {
   color: nth($blue, 1);
 }
 
-.hide {
-  display: none;
-}
-
 .header {
   @include flex($a: center);
   max-width: 1280px;
@@ -48,6 +44,7 @@ body {
     position: fixed;
     background-color: rgba(#fff, 0.6);
     width: 100%;
+    max-width: 100%;
     z-index: 100;
     top: 0;
     padding: 10px 5.12vw;
@@ -327,14 +324,21 @@ body {
   }
 }
 .scroll-top {
-  position: fixed;
+  position: sticky;
   width: 2.6vw;
   height: 2.6vw;
-  right: 1.25vw;
-  bottom: 1.25vw;
+  left: 95%;
+  bottom: 2vw;
   background-color: nth($blue, 1);
   @include flex($j: center, $a: center);
   border-radius: 50%;
+
+  &:hover {
+    box-shadow: 0 0 5px 3px nth($blue, 4);
+  }
+  &:hover > .cont-box > span {
+    border: 2px solid #fff;
+  }
   &.underFooter {
     display: none;
   }
@@ -403,3 +407,6 @@ body {
 }
 
 @import "media";
+.hide {
+  display: none;
+}

@@ -13,18 +13,13 @@ closeNav.addEventListener("click", () => {
 //스크롤시 헤드 고정
 document.addEventListener("scroll", () => {
   let scrollValue = document.documentElement.scrollTop;
-  //스크롤 탑 버튼
-
-  // scrollTop.addEventListener("click", () => {
-  //   $("html, body").animate({ scrollTop: "0px" });
-  // });
   console.log(scrollValue);
+
   if (scrollValue > 43) {
     //헤더 고정
     if (!document.querySelector(".header").classList.contains("fixed")) {
       document.querySelector(".header").classList.add("fixed");
       //스크롤 온
-      scrollTop.querySelector("");
     }
   } else {
     if (document.querySelector(".header").classList.contains("fixed")) {
@@ -32,33 +27,36 @@ document.addEventListener("scroll", () => {
     }
   }
 
-  if (scrollValue > 303) {
-    if (!scrollTop.classList.contains("underFooter")) {
-      scrollTop.classList.add("underFooter");
+  if (scrollValue > 100) {
+    if (scrollTop.classList.contains("hide")) {
+      console.log("zz");
+      scrollTop.classList.remove("hide");
     }
   } else {
-    if (scrollTop.classList.contains("underFooter")) {
-      scrollTop.classList.remove("underFooter");
-    }
+    scrollTop.classList.add("hide");
   }
 });
 
-// //구독 input 입력
-// let subscribeForm = document.querySelector(".subscribe__form");
-// let subscribeInp = document.querySelector(".subscribe__email");
-// let regExp =
-//   /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-// subscribeForm.addEventListener("submit", (event) => {
-//   event.preventDefault();
-//   if (regExp.test(subscribeInp.value)) {
-//     document.querySelector(".cont-modal").classList.toggle("cont-modal--hide");
-//     subscribeInp.value = "";
-//   } else {
-//     alert("이메일 형식에 맞지않습니다. 다시 작성해주세요");
-//     subscribeInp.value = "";
-//   }
-// });
-// let contModalBtn = document.querySelector(".cont-modal__btn");
-// contModalBtn.addEventListener("click", () => {
-//   document.querySelector(".cont-modal").classList.toggle("cont-modal--hide");
-// });
+scrollTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+});
+
+//구독 input 입력
+let subscribeForm = document.querySelector(".contForm form");
+let subscribeInp = document.querySelector("#emailInp");
+let regExp =
+  /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+subscribeForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (regExp.test(subscribeInp.value)) {
+    document.querySelector(".modal").classList.toggle("hide");
+    subscribeInp.value = "";
+  } else {
+    alert("이메일 형식에 맞지않습니다. 다시 작성해주세요");
+    subscribeInp.value = "";
+  }
+});
+let contModalBtn = document.querySelector(".modal button");
+contModalBtn.addEventListener("click", () => {
+  document.querySelector(".modal").classList.toggle("hide");
+});

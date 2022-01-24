@@ -10,7 +10,7 @@
   border-radius: $r;
   color: #fff;
   &:hover {
-    background-color: #c7add6;
+    background-color: lighten(#183152, 40%);
   }
 }
 @mixin ir($bg) {
