@@ -103,8 +103,8 @@ body {
   &.banner {
     @include flex($a: center);
     height: 46.87vw;
-    background: lighten(nth($blue, 3), 20%) url(../img/배경그림.png)
-      no-repeat 61.71vw 110px;
+    background: lighten(nth($blue, 3), 20%) url(../img/background.png) no-repeat
+      61.71vw 110px;
     header {
       h2 {
         //화면을 줄였을 때 폰트 사이즈 크기가 애매하다.
@@ -315,7 +315,7 @@ body {
       height: 5.72vw;
       margin: 0 auto;
       content: "";
-      background: url($url + "모달창.png") no-repeat center center/contain;
+      background: url($url + "modal.png") no-repeat center center/contain;
     }
     h2 {
       margin: 1.25vw 0 0.62vw;
